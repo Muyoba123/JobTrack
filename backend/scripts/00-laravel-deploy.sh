@@ -16,15 +16,6 @@ mkdir -p \
 
 chmod -R 777 storage bootstrap/cache
 
-echo "Installing Laravel production dependencies..."
-
-composer install \
-    --no-dev \
-    --no-interaction \
-    --prefer-dist \
-    --optimize-autoloader \
-    --working-dir=/var/www/html
-
 echo "Clearing old Laravel configuration cache..."
 
 php artisan config:clear
