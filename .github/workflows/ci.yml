@@ -53,6 +53,13 @@ jobs:
       - name: Prepare Laravel Environment
         run: |
           cp .env.example .env
+
+          mkdir -p storage/framework/cache/data
+          mkdir -p storage/framework/sessions
+          mkdir -p storage/framework/views
+          mkdir -p storage/framework/testing
+          mkdir -p storage/logs
+
           php artisan key:generate
 
       - name: Run Database Migrations
