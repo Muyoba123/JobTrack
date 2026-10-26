@@ -1,10 +1,11 @@
+```dockerfile
 FROM richarvey/nginx-php-fpm:3.1.6
 
 WORKDIR /var/www/html
 
 COPY . .
 
-# Create Laravel runtime directories excluded by .dockerignore
+# Create required Laravel runtime directories
 RUN mkdir -p \
     storage/framework/cache/data \
     storage/framework/sessions \
@@ -27,3 +28,4 @@ ENV LOG_CHANNEL=stderr
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 CMD ["/start.sh"]
+```
