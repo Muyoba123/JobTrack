@@ -23,6 +23,7 @@ ENV REAL_IP_HEADER=1
 ENV APP_ENV=production
 ENV APP_DEBUG=false
 ENV LOG_CHANNEL=stderr
+ENV VIEW_COMPILED_PATH=/var/www/html/storage/framework/views
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 CMD ["/start.sh"]

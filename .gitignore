@@ -4,9 +4,15 @@ backend/.env.*
 !backend/.env.example
 backend/vendor/
 backend/storage/logs/*
+!backend/storage/logs/.gitignore
 backend/storage/framework/cache/*
+!backend/storage/framework/cache/.gitignore
 backend/storage/framework/sessions/*
-backend/storage/framework/views/
+!backend/storage/framework/sessions/.gitignore
+backend/storage/framework/views/*
+!backend/storage/framework/views/.gitignore
+backend/storage/framework/testing/*
+!backend/storage/framework/testing/.gitignore
 
 # React
 frontend/node_modules/
