@@ -1,11 +1,10 @@
-```dockerfile
 FROM richarvey/nginx-php-fpm:3.1.6
 
 WORKDIR /var/www/html
 
 COPY . .
 
-# Create required Laravel runtime directories
+# Ensure Laravel's runtime directories exist before configuration is cached
 RUN mkdir -p \
     storage/framework/cache/data \
     storage/framework/sessions \
@@ -24,8 +23,6 @@ ENV REAL_IP_HEADER=1
 ENV APP_ENV=production
 ENV APP_DEBUG=false
 ENV LOG_CHANNEL=stderr
-
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 CMD ["/start.sh"]
-```
